@@ -13,7 +13,7 @@ const Footer = () => {
 
             width:'100%',
             height:'15rem',
-            marginTop:'2rem',
+            marginTop:'1rem',
             display:'flex',
             justifyContent:'center',
             alignItems:'flex-start',

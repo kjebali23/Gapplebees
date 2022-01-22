@@ -2,22 +2,26 @@ import { BrowserRouter as Router , Route , Routes } from 'react-router-dom';
 import './App.css';
 import Navbar from './component/Navbar';
 import Home from './Pages/MainPage';
-import About from './Pages/about';
-import Contact from './Pages/contactUs';
-import Services from './Pages/services';
+import About from './Pages/MainPage/About';
+import Features from './Pages/MainPage/Features';
+import Contact from './Pages/MainPage/Contact';
+import MatchPage from './Pages/MatchPage';
 
 
 function App() {
   return (
+    <>
       <Router>
-        <Navbar />
+        {/* <Navbar /> */}
         <Routes>
           <Route path='/'  element={<Home/>}/>
           <Route path='/About'  element={<About/>}/>
-          <Route path='/Services'  element={<Services/>}/>
+          <Route path='/Features'  element={<Features/>}/>
           <Route path='/Contact-Us'  element={<Contact/>}/>
+          <Route path='/Race'  element={<MatchPage/>}/>          
         </Routes>
       </Router>
+    </>
 
   );
 }

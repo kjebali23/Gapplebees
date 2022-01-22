@@ -22,7 +22,6 @@ const Cards = (props) => {
         
         <div className='Card' >
             <div className='card--body' style={{
-            // border: 'solid red',
             borderRadius:'3%',
             height: '25rem',
             width:'26.5rem',
