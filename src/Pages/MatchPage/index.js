@@ -1,7 +1,7 @@
 import React from 'react';
-import Container from '@mui/material/Container';
 import Dashboard from './Dashboard/Dashboard';
-import MatchSection from './MatchSection/MatchSection';
+// import MatchSection from './MatchSection/MatchSection';
+import Match from './Match/Match';
 
 export default function SimpleContainer() {
   return (
@@ -10,10 +10,11 @@ export default function SimpleContainer() {
       flexDirection:'column',
       background:'whiteSmoke',
       width:'100%',
-      height:'100vh'
+      height:'100vh',
+      background:'whitesmoke'
     }}>
     <Dashboard/>
-    <MatchSection/>
+    <Match/>
     </div>
 )
   }
