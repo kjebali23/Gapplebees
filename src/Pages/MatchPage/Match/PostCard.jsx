@@ -1,5 +1,4 @@
-import { Avatar, Card, CardContent, CardHeader, CardMedia, IconButton, Typography } from '@mui/material';
-import { MoreVert } from '@mui/icons-material';
+import { Card, CardContent, CardMedia, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';

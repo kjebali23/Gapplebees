@@ -50,12 +50,12 @@ export default function BadgeAvatars() {
         anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
         variant="dot"
       >
-        <Avatar alt="Remy Sharp" src={userImage} />
+        <Avatar alt="" src={userImage} />
         
       </StyledBadge>
       
     </Stack>
-    <h3 style={{marginLeft:'0.5rem'}}>Test</h3>
+    <h3 style={{marginLeft:'0.5rem', fontSize:'20px', fontWeight:'bolder'}}>PlaceHolder</h3>
     </div>
   );
 }
