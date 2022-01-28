@@ -1,0 +1,19 @@
+.card{
+    /* position: relative; */
+    width:25rem;
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+.cards{
+    display: flex;
+    justify-content: center;
+}
+
+.swipe{
+    padding: 0%;
+    position: absolute;
+}
+

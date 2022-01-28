@@ -41,21 +41,20 @@ const SmallAvatar = styled(Avatar)(({ theme }) => ({
 
 const userImage ='https://images.unsplash.com/photo-1631819825505-4291831187ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWF6ZGElMjBtaWF0YXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60'
 
-export default function BadgeAvatars() {
+export default function BadgeAvatars(props) {
   return (
     <div style={{display:'flex', flexDirection:'row', alignItems:'center'}}>
     <Stack direction="row" spacing={2}>
       <StyledBadge
         overlap="circular"
         anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-        variant="dot"
       >
         <Avatar alt="" src={userImage} />
         
       </StyledBadge>
       
     </Stack>
-    <h3 style={{marginLeft:'0.5rem', fontSize:'20px', fontWeight:'bolder'}}>PlaceHolder</h3>
+    <h3 style={{marginLeft:'0.5rem', fontSize:'20px', fontWeight:'bolder'}}>{props.name}</h3>
     </div>
   );
 }

@@ -6,6 +6,7 @@ import About from './Pages/MainPage/About';
 import Features from './Pages/MainPage/Features';
 import Contact from './Pages/MainPage/Contact';
 import MatchPage from './Pages/MatchPage';
+import Slider from './Pages/MatchPage/Match/Slider/Slider'
 
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
           <Route path='/Features'  element={<Features/>}/>
           <Route path='/Contact-Us'  element={<Contact/>}/>
           <Route path='/Race'  element={<MatchPage/>}/>          
+          {/* <Route path='/Test'  element={<Slider/>}/>           */}
+
         </Routes>
       </Router>
     </>
