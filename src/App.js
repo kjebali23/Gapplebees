@@ -20,8 +20,8 @@ function App() {
           <Route path='/Features'  element={<Features/>}/>
           <Route path='/Contact-Us'  element={<Contact/>}/>
           <Route path='/Race'  element={<MatchPage/>}/>          
-          {/* <Route path='/Test'  element={<Slider/>}/>           */}
-
+          <Route path='/Test'  element={<Slider/>}/>          
+          
         </Routes>
       </Router>
     </>

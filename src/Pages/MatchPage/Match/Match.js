@@ -4,6 +4,7 @@ import PostCard from './PostCard';
 import { Stack } from '@mui/material';
 import CheckIcon from '@mui/icons-material/Check';
 import ClearIcon from '@mui/icons-material/Clear';
+import Profile from '../Profile/Profile';
 
 
 

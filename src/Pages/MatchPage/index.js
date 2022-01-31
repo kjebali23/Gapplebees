@@ -1,9 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Dashboard from './Dashboard/Dashboard';
 // import MatchSection from './MatchSection/MatchSection';
 import Match from './Match/Match';
+import Profile from './Profile/Profile';
 
 export default function SimpleContainer() {
+  
+  const [profileSection, setProfileSection]= useState(false);
+
+  const renderProfile = ()=>{
+    setProfileSection(!profileSection);
+  }
+
+
   return (
     <div style={{
       display:'flex',
@@ -13,8 +22,13 @@ export default function SimpleContainer() {
       height:'100vh',
       background:'whitesmoke'
     }}>
-    <Dashboard/>
+    <Dashboard displayProfile={renderProfile} />
+    {profileSection === false && (
+
     <Match/>
+    )}
+    {profileSection === true && <Profile/>}
+
     </div>
 )
   }
