@@ -8,6 +8,7 @@ export default function SimpleContainer() {
   
   const [profileSection, setProfileSection]= useState(false);
 
+
   const renderProfile = ()=>{
     setProfileSection(!profileSection);
   }
@@ -20,14 +21,13 @@ export default function SimpleContainer() {
       background:'whiteSmoke',
       width:'100%',
       height:'100vh',
-      background:'whitesmoke'
     }}>
     <Dashboard displayProfile={renderProfile} />
     {profileSection === false && (
 
     <Match/>
     )}
-    {profileSection === true && <Profile/>}
+    {profileSection === true && <Profile displayProfile={renderProfile}  />}
 
     </div>
 )

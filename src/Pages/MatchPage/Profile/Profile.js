@@ -1,9 +1,8 @@
 import React from 'react';
-import EditImages from './EditSection/EditImages';
+import EditProfile from './EditProfile/EditProfile';
 import Paramters from './Parameters/Paramters';
-import Card from './EditSection/Card.js';
 
-const Profile = () => {
+const Profile = (props) => {
   return (
       <>
         <div className="container" style={{
@@ -16,18 +15,15 @@ const Profile = () => {
         }}>
 
           <div className='parameter-section' style={{background:'white', width:'25%' ,
-          border:'solid 5px whitesmoke' 
+          border:'solid 1px whitesmoke' 
           // borderTop:'solid 5px whitesmoke' , 
           // borderRight:'solid 5px whitesmoke'
           }}>
-            <Paramters/>
+            <Paramters displayProfile={props.displayProfile}  />
           </div>
 
-          <div className='modification-section' style={{background:'whitesmoke', width:'75%', border:'solid 5px whitesmoke'}}>
-            <div className='title' style={{background:'white', height:'2.5rem', display:'flex', alignItems:'center', justifyContent:'center'}}>
-              <h2>Profile</h2>
-            </div>
-          <EditImages/>
+          <div className='main-section' style={{background:'whitesmoke', width:'75%', border:'solid 3px whitesmoke'}}>
+              <EditProfile/>
           </div>
 
         </div>
