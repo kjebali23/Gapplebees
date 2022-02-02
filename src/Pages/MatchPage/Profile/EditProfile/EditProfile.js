@@ -1,5 +1,6 @@
 import React from 'react';
 import CardSection from './CardSection';
+import UserInfo from './UserInfo';
 
 const EditProfile = () => {
   return (
@@ -9,6 +10,7 @@ const EditProfile = () => {
                 <h3>Profile</h3>
             </div>
             <CardSection/>
+            <UserInfo/>
         </div>
       </>
   )
