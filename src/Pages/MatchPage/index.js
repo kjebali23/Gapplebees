@@ -24,7 +24,6 @@ export default function SimpleContainer() {
     }}>
     <Dashboard displayProfile={renderProfile} />
     {profileSection === false && (
-
     <Match/>
     )}
     {profileSection === true && <Profile displayProfile={renderProfile}  />}

@@ -1,8 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import EditProfile from './EditProfile/EditProfile';
 import Paramters from './Parameters/Paramters';
+import AccountSettings from './AccountSettings/AccountSettings';
 
 const Profile = (props) => {
+
+const [section , setSection]= useState(1)
+
+const ProfileSection =()=>{
+  setSection(1)
+}
+
+const SettingSection =()=>{
+  setSection(2)
+}
+
+
+
   return (
       <>
         <div className="container" style={{
@@ -19,11 +33,16 @@ const Profile = (props) => {
           // borderTop:'solid 5px whitesmoke' , 
           // borderRight:'solid 5px whitesmoke'
           }}>
-            <Paramters displayProfile={props.displayProfile}  />
+            <Paramters displayProfile={props.displayProfile}  SettingSection={SettingSection} ProfileSection={ProfileSection}  />
           </div>
 
           <div className='main-section' style={{background:'whitesmoke', width:'75%', border:'solid 3px whitesmoke'}}>
-              <EditProfile/>
+              
+              {section === 1 && <EditProfile/>}
+              {section === 2 && <AccountSettings/>}
+
+              
+
           </div>
 
         </div>
