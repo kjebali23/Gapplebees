@@ -8,7 +8,7 @@ const Images = [ 'https://images.unsplash.com/photo-1607603750916-eaf866bc907d?i
 const CardSection = () => {
   return (
       <>
-        <div className="cards-container" style={{width:'70%' , height:'24rem', background:'linear-gradient(348deg, rgba(58,97,234,1) 0%, rgba(100,216,242,1) 100%)', marginTop:'1rem' ,
+        <div className="cards-container" style={{width:'85%' , height:'24rem', background:'linear-gradient(348deg, rgba(58,97,234,1) 0%, rgba(100,216,242,1) 100%)', marginTop:'1rem' ,
         display:'flex',
         flexDirection:'column',
         borderRadius:'0.5rem'

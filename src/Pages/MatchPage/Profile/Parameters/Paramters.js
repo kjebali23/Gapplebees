@@ -18,7 +18,7 @@ const Paramters = (props) => {
         <div className="params-container">
             <ParamBtn ProfileSection={props.ProfileSection} id={1}  btnName={'Edit Profile'}/>
             <ParamBtn SettingSection={props.SettingSection} id={2} btnName={'Settings'}/>
-            <ParamBtn btnName={'Log out'}/>            
+            <ParamBtn showmodal={props.showmodal} btnName={'Log out'}/>            
         </div>
       </>
   )

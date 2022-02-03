@@ -7,7 +7,7 @@ const UserInfo = () => {
         <div className='user-info-container' style={{
             background:'rgb(112,179,235)',
             borderRadius:'0.5rem',
-            width:'70%',
+            width:'85%',
             height:'10rem',
             marginTop:'0.5rem'
         }}>

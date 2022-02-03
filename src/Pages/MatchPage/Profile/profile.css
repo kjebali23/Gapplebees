@@ -7,14 +7,14 @@
 }
 
 
-.param-btn{
+/* .param-btn{
     width: 85%;
     height: 3rem;
     margin-top: 1rem;
     border: none;
     background: white;
     border-radius: 2rem;
-}
+} */
 
 .param-btn:hover{
     background: whitesmoke;
