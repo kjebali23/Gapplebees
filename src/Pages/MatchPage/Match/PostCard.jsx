@@ -1,8 +1,4 @@
-// import { Card, CardContent, CardMedia, Typography } from '@mui/material';
-import { makeStyles } from '@mui/styles';
 import React from 'react';
-// import { Swiper, SwiperSlide } from 'swiper/react';
-// import BadgeAvatars from './Avatar';
 import TinderCard from 'react-tinder-card';
 import './Cards.css'
 import Slider from './Slider/Slider'
@@ -33,15 +29,18 @@ const People=[
 const PostCard = () => {
     // const {media} = useStyles(); 
     return (
-<>      <div className="cards">
+<>      <div className="cards" >
+    <p>test</p>
             {People.map((person)=>
             <TinderCard 
                 key={person.id}
                 className='swipe'
                 preventSwipe={['up', 'down']}
+                
             >
-                <div className='card-container' style={{ width:'30rem'}}>
-                    {/* <h1>{person.name}</h1> */} 
+                <div className='card-container' style={{ width:'100%',background:'red' ,display:'flex' , flexDirection:'column' , alignItems:'center'}}>
+
+                    <h1 style={{background:'none', width:'100%'}}>{person.name}</h1> 
                     <Slider/>
                 </div>
             </TinderCard>

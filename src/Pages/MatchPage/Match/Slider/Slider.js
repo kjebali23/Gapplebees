@@ -48,9 +48,9 @@ const Slider = () => {
         setSlideIndex(index)
     }
 
-    const imgDoubleclick = ()=>{
-        console.log('double clicked ... show modal')
-    }
+    // const imgDoubleclick = ()=>{
+    //     console.log('double clicked ... show modal')
+    // }
 
   return (
       <>
@@ -60,7 +60,9 @@ const Slider = () => {
             {dataSlider.map((obj, index)=>{
                 return (
                     <div key={obj.id} className={slideIndex === index + 1 ? "slide active-anim" : 'slide'}>
-                    <img src={Images[slideIndex - 1]} onDoubleClick={imgDoubleclick}/>
+                    <img src={Images[slideIndex - 1]} 
+                    // onDoubleClick={imgDoubleclick}
+                    />
                     </div>
                 )}
             )}

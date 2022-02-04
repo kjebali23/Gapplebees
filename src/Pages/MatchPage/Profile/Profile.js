@@ -36,7 +36,7 @@ const Modal =()=>{
         }}>
 
           <div className='parameter-section' style={{background:'white', width:'25%' ,
-          border:'solid 1px whitesmoke' 
+          borderTop:'solid 3px whitesmoke' 
           // borderTop:'solid 5px whitesmoke' , 
           // borderRight:'solid 5px whitesmoke'
           }}>

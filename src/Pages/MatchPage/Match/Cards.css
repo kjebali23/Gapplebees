@@ -15,11 +15,26 @@
 .swipe{
     padding: 0%;
     position: absolute;
+    width: 30rem;
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 600px){
+    .swipe {
+      width: 22rem;
+    }
+}
+
+/* @media screen and (max-width: 700px){
     .image-container {
-      /* margin: 1rem 0.25rem 0 0.25rem; */
       width: 20rem;
     }
+   
+
+  } */
+
+  @media screen and (max-device-width: 700px){
+    .card-container{
+        width: 20rem;
+    }
+
   }
