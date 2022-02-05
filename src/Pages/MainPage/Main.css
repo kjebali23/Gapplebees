@@ -15,21 +15,27 @@
     width: 60%;
     align-self :center;
     text-align:center;
-    height:38%;
+    height:40%;
     display:flex;
     justify-content:center;
     align-items:center;
     flex-direction: column;
-    /* padding-top:0.5rem; */
     color: black;
     box-shadow: 3px 7px 51px -6px rgba(0,0,0,0.69);
-    /* background: rgb(255,255,255); */
     background: linear-gradient(171deg, rgba(255,255,255,1) 24%, rgba(186,199,245,1) 100%);
 }
 
 .title{
     font-weight: bold;
 }
+
+.mainBtns{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items:center;
+    margin-top:0.5rem; 
+  }
 
 .btn{
     height: 36px;
@@ -45,7 +51,6 @@
     padding-top: 0.5rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    /* background: blue; */
 }
 
 
@@ -91,6 +96,13 @@
       font-size: 16px;
     }
   }
+
+  @media screen and (max-width: 350px){
+    .slogan-holder{
+        width: 17rem;
+    }
+    
+  }
 /* ----------------- Divider Section Style -------------------- */
 .divider{
     background: white;
@@ -129,10 +141,8 @@
     padding-left: 1.6rem;
     padding-right: 1.6rem;
     display: flex;
-    /* justify-content: flex-start; */
     align-items: center; 
     flex-direction: row; 
-    /* justify-content: space-between;  */
     justify-content: center;
     background: linear-gradient(60deg, rgba(58,97,234,1) 0%, rgba(100,216,242,1) 100%);
   }
@@ -143,9 +153,7 @@
     height: 60%;
     display:flex;
     flex-direction: column;
-    /* padding-top: 1.5rem; */
     justify-content: center;
-    /* margin-left: 5%; */
     margin-right: 0.5rem;
     color: black;
     box-shadow: 3px 7px 51px -6px rgba(0,0,0,0.69);
@@ -154,7 +162,6 @@
 }
 
 .about-text{
-    /* padding-top: 4rem; */
     padding-left: 2rem;
     padding-right: 2rem; 
     margin-top: 0.5rem;
@@ -163,7 +170,6 @@
 .meme-image{
     width: 25%;
     height: 60%;
-    /* margin-left: 0.5rem; */
     box-shadow: 3px 7px 51px -6px rgba(0,0,0,0.69);       
   
 }
@@ -183,13 +189,21 @@
     .meme-image{
         width: 70%;
         height: 45%;
-        /* margin-left: 1.5rem; */
     }
     .about-title{
         font-size: 22px;
     }
     .about-text{
         font-size: 14px;
+    }
+  }
+
+  @media screen and (max-width: 350px){
+    .wraper{
+        height: 80vh;
+    }
+    .about-text{
+        overflow: scroll;
     }
   }
 
@@ -215,7 +229,6 @@
     background: linear-gradient(171deg, rgba(255,255,255,1) 24%, rgba(186,199,245,1) 100%);
     text-align: center;
     box-shadow:  3px 7px 51px -6px rgba(0,0,0,0.69); 
-    /* overflow: scroll; */
 }
 
 .card-img{
@@ -235,6 +248,11 @@
     overflow: scroll;
 
 }
+@media screen and (max-width: 1000px){
+    .feature-wraper {
+      height: 30rem;
+    }
+  }
 
 @media screen and (max-width: 500px){
     .feature-wraper{
@@ -243,7 +261,6 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        /* flex-wrap: wrap; */
     }
     .card-body{
         height: 17rem;
@@ -268,7 +285,6 @@
     width: 95%;
     margin-left: 2.5%;
     background: linear-gradient(0deg, rgba(58,97,234,1) 0%, rgba(100,216,242,1) 100%);
-    /* background-color: red; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -325,7 +341,13 @@
     margin-top: 1rem;
 }
 
-@media screen and (max-width: 750px){
+@media screen and (max-width: 1150px){
+    .message-input{
+        width: 13rem;
+    }
+  }
+
+@media screen and (max-width: 800px){
     .form{
         height: 20rem;
         width:15rem;
