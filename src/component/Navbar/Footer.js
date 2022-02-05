@@ -31,7 +31,7 @@ const Footer = () => {
                     alignItems:'center'
                 }}>
                     <h1 style={{color:'black'}}>Gapplebees&copy;</h1>
-                    <p style={{marginTop:'1rem', color:'white'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    <p style={{marginTop:'1rem', color:'white'}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                     <div className='social-icons' style={{
                         // background:'blue',
                         display:'flex',

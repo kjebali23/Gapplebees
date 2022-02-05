@@ -1,0 +1,337 @@
+/* -------- Hero section style ------- */
+.container{
+    height: 83vh;
+    display:flex;
+    justify-content: center;
+}
+
+.main-background{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(348deg, rgba(58,97,234,1) 0%, rgba(100,216,242,1) 100%);
+}
+.slogan-holder{
+    width: 60%;
+    align-self :center;
+    text-align:center;
+    height:38%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    /* padding-top:0.5rem; */
+    color: black;
+    box-shadow: 3px 7px 51px -6px rgba(0,0,0,0.69);
+    /* background: rgb(255,255,255); */
+    background: linear-gradient(171deg, rgba(255,255,255,1) 24%, rgba(186,199,245,1) 100%);
+}
+
+.title{
+    font-weight: bold;
+}
+
+.btn{
+    height: 36px;
+    width: 20vh;
+    margin: 0.5rem;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.text{
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    /* background: blue; */
+}
+
+
+@media screen and (max-width: 750px){
+    .container {
+        height: 70vh ;
+      }
+  }
+
+  
+  @media screen and (max-width: 700px){
+    .container {
+        height: 60vh ;
+      }
+    .main-background {
+        width: 95%;
+      }
+  }
+
+  @media screen and (max-width: 1100px){
+    .slogan-holder {
+      width: 40rem;
+    }
+  }
+
+  @media screen and (max-width: 750px){
+    .slogan-holder {
+      height: 23rem;
+      width: 23rem;
+    }
+  }
+  @media screen and (max-width: 600px){
+    .slogan-holder {
+      height: 20rem;
+      width: 19rem;
+    }
+  }
+
+  @media screen and (max-width: 550px){
+    .btn {
+      height: 35px;
+      width: 80px;
+      font-size: 16px;
+    }
+  }
+/* ----------------- Divider Section Style -------------------- */
+.divider{
+    background: white;
+    height: 7rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 750px){
+    .divider h1{
+        font-size: 26px;
+    }
+  }
+
+@media screen and (max-width: 700px){
+    .divider{
+        height: 5rem;
+    }
+  }
+
+@media screen and (max-width: 600px){
+    .divider{
+        height: 4rem;
+    }
+  }
+
+
+/* -----------------About Section Style ----------------------- */
+
+.wraper{
+    height: 68vh;
+    width: 95%;
+    margin-left: 2.5%;
+    background: linear-gradient(60deg, rgba(58,97,234,1) 0%, rgba(100,216,242,1) 100%);
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    display: flex;
+    /* justify-content: flex-start; */
+    align-items: center; 
+    flex-direction: row; 
+    /* justify-content: space-between;  */
+    justify-content: center;
+    background: linear-gradient(60deg, rgba(58,97,234,1) 0%, rgba(100,216,242,1) 100%);
+  }
+
+.about-holder{
+    width: 60%;
+    text-align: center;
+    height: 60%;
+    display:flex;
+    flex-direction: column;
+    /* padding-top: 1.5rem; */
+    justify-content: center;
+    /* margin-left: 5%; */
+    margin-right: 0.5rem;
+    color: black;
+    box-shadow: 3px 7px 51px -6px rgba(0,0,0,0.69);
+    background: rgb(255,255,255);
+    background: linear-gradient(171deg, rgba(255,255,255,1) 24%, rgba(186,199,245,1) 100%);
+}
+
+.about-text{
+    /* padding-top: 4rem; */
+    padding-left: 2rem;
+    padding-right: 2rem; 
+    margin-top: 0.5rem;
+}
+
+.meme-image{
+    width: 25%;
+    height: 60%;
+    /* margin-left: 0.5rem; */
+    box-shadow: 3px 7px 51px -6px rgba(0,0,0,0.69);       
+  
+}
+
+@media screen and (max-width: 600px){
+    .wraper{
+        height: 70vh ;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .about-holder{
+        width: 70%;
+        height: 45%;
+        margin-left: 0.5rem;
+    }
+    .meme-image{
+        width: 70%;
+        height: 45%;
+        /* margin-left: 1.5rem; */
+    }
+    .about-title{
+        font-size: 22px;
+    }
+    .about-text{
+        font-size: 14px;
+    }
+  }
+
+/* ------------------------ How does it work Section Style -----------------------*/
+.feature-wraper{
+    height: 68vh;
+    width: 95%;
+    margin-left: 2.5%;
+    background: linear-gradient(0deg, rgba(58,97,234,1) 0%, rgba(100,216,242,1) 100%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card-body{
+    border-radius: 3%;
+    height: 25rem;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(171deg, rgba(255,255,255,1) 24%, rgba(186,199,245,1) 100%);
+    text-align: center;
+    box-shadow:  3px 7px 51px -6px rgba(0,0,0,0.69); 
+    /* overflow: scroll; */
+}
+
+.card-img{
+    height: 50%;
+    width: 50%;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 1.5rem;
+}
+
+.card-title{
+    margin-top: 1rem;
+}
+
+.card-text{
+    margin: 1.5rem;
+    overflow: scroll;
+
+}
+
+@media screen and (max-width: 500px){
+    .feature-wraper{
+        height: 55rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* flex-wrap: wrap; */
+    }
+    .card-body{
+        height: 17rem;
+        width: 15rem;
+    }
+    .card-img{
+        height: 4.5rem;
+        width: 4.5rem;
+    }
+    .card-title{
+        font-size: 20px;
+        padding-left:3px;
+        padding-right: 3px;
+    }
+    .card-text{
+        font-size: 14px;
+    }
+  }
+/* --------------------------- Contact us Section Style ------------------------- */
+.contact-form-wraper{
+    height: 60vh;
+    width: 95%;
+    margin-left: 2.5%;
+    background: linear-gradient(0deg, rgba(58,97,234,1) 0%, rgba(100,216,242,1) 100%);
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container{
+    width: 100%;
+    margin-bottom : 0rem ;
+    height: 20rem; 
+    display: flex ;
+    justify-content: center;  
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0rem;
+    border-radius: 3%;
+    background: rgba(186,199,245);
+    height: 100%; 
+    width: 35%; 
+    justify-content: flex-start;
+    padding-left: 1rem;
+    padding-top: 2rem; 
+}
+
+.form label{
+    margin: 0.2rem ;
+    font-weight: bold;
+}
+
+.input{
+    width: 13rem;
+    height: 10%;
+    padding-left: 0.5rem; 
+    margin-bottom: 0.2rem; 
+    background: whitesmoke;
+    border: none;
+    border-radius: 0.2rem;
+}
+
+.message-input{
+    height: 4rem;
+    width: 22rem;
+}
+
+.form-btn{
+    width: 6rem;
+    height: 2rem;
+    align-self: center; 
+    margin-top: 0.5rem;
+    border: none;
+    border-radius: 0.3rem;
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 750px){
+    .form{
+        height: 20rem;
+        width:15rem;
+    }
+    .message-input{
+        width: 13rem;
+    }
+  }
+

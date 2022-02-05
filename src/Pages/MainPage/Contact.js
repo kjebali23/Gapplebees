@@ -6,7 +6,10 @@ const Contact = () => {
   return (
       <>
          <Divider divTitle={'Contact Us'} />
+         <div className='contact-form-wraper'>
+           {/* <p>test</p> */}
          <ContactForm />
+         </div>
       </>      
   )
 };

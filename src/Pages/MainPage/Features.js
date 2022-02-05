@@ -1,6 +1,7 @@
 import React from 'react';
 import Divider from './Divider';
-import AllCards from './AllCards'
+// import AllCards from './AllCards'
+import Cards from './Cards'
 
 
 const Features = () => {
@@ -8,8 +9,10 @@ const Features = () => {
       <>
          <Divider divTitle={'How does it work?'}/>
         
-        <div className="wraper" style={{  background: 'linear-gradient(0deg, rgba(58,97,234,1) 0%, rgba(100,216,242,1) 100%)'}}>
-            <AllCards/>
+        <div className="feature-wraper">
+            <Cards id={1} />
+            <Cards id={2} />
+            <Cards id={3} />
         </div>
       </>
   )
