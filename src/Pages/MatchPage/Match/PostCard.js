@@ -1,6 +1,6 @@
 import React from 'react';
 import TinderCard from 'react-tinder-card';
-import './Cards.css'
+// import './Cards.css'
 import Slider from './Slider/Slider'
 
 
@@ -29,8 +29,8 @@ const People=[
 const PostCard = () => {
     // const {media} = useStyles(); 
     return (
-<>      <div className="cards" >
-    <p>test</p>
+<>      
+<div className="cards" >
             {People.map((person)=>
             <TinderCard 
                 key={person.id}
@@ -38,9 +38,10 @@ const PostCard = () => {
                 preventSwipe={['up', 'down']}
                 
             >
-                <div className='card-container' style={{ width:'100%',background:'red' ,display:'flex' , flexDirection:'column' , alignItems:'center'}}>
-
-                    <h1 style={{background:'none', width:'100%'}}>{person.name}</h1> 
+                <div className='card-container'>
+                    {/* <div className='car-owner-info'>
+                        <p>{person.name}</p> 
+                    </div> */}
                     <Slider/>
                 </div>
             </TinderCard>

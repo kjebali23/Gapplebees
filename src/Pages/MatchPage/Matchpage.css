@@ -1,0 +1,291 @@
+.matchpage{
+    display: flex;
+    flex-direction: column;
+    background: whiteSmoke;
+    width: 100%;
+    height: 100vh;
+}
+
+/*---------------------------------- Header Section Style -------------------------- */
+
+.dashboard{
+    width: 100%;
+    background: white;
+    padding-left: 1rem ;
+    padding-right: 1rem; 
+    height: 4rem;
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-info{
+    display: flex;
+    flex-direction: row ;
+    align-items:center ;
+    width: 33%;
+}
+
+.user-name{
+    margin-left: 0.5rem;
+}
+
+.dashboard-title{
+    width: 33%; 
+    text-align: center;
+}
+.dashboard-title h1{
+    color: rgb(69, 101, 226);
+}
+
+.message-section-btn{
+    width: 33%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 600px){
+    .user-name{
+        display: none;
+    }
+    .dashboard-title{
+        width: 70%;
+    }
+    .user-info{
+        width: 15%;
+    }
+    .message-section-btn{
+        width: 15%;
+    }
+}
+
+/* ------------------------------ Match Section Style --------------------------------- */
+
+.match-container{
+    width: 100%; 
+    height: 100vh;
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+}
+
+.swipe{
+    padding: 0%;
+    position: absolute;
+    width: 70%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card-container{
+    width: 95%;
+    background: pink;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+}
+
+.card-container p{
+    width: 100%;
+    color: black;
+}
+
+
+@media screen and (min-width: 900px){
+    .swipe {
+        width: 70%;
+        height: 80vh;
+      }
+    .card-container{
+        width: 43.7rem;
+        height: 32.2rem;
+    }
+}
+
+
+@media screen and (max-width: 900px){
+    .swipe {
+        width: 35rem;
+      }
+    .card-container{
+        width: 95%;
+        height: 27rem;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .swipe {
+        width: 30rem;
+      }
+    .card-container{
+        width: 95%;
+        height: 27rem;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .swipe {
+        width: 26rem;
+      }
+    .card-container{
+        width: 95%;
+        height: 25rem;
+    }
+}
+
+@media screen and (max-width: 410px){
+    .swipe {
+        width: 22rem;
+      }
+    .card-container{
+        width: 95%;
+        height: 25rem;
+    }
+}
+
+@media screen and (max-width: 350px){
+    .swipe {
+        width: 21rem;
+      }
+    .card-container{
+        width: 95%;
+        height: 25rem;
+    }
+}
+@media screen and (max-width: 330px){
+    .swipe {
+        width: 20rem;
+      }
+    .card-container{
+        width: 95%;
+        height: 25rem;
+    }
+}
+
+/* --------------------------------- Slider Section Style ---------------------------------- */
+
+.slider-container {
+    max-width: 700px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: rgb(69, 101, 226);
+    border-radius: 1rem;
+
+}
+
+.container-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity ease-in-out 0.4s;
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.active-anim {
+    opacity: 1;
+}
+  
+.btn-slide {
+    width: 3.3rem;
+    height: 3.3rem;
+    border-radius: 50%;
+    background: #f1f1f1;
+    border: 1px solid rgba(34, 34, 34, 0.287);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+  
+.btn-slide img {
+    width: 25px;
+    height: 25px;
+    pointer-events: none;
+}
+.prev {
+    top: 50%;
+    left: 20px;
+    transform: translateY(-60%);
+}
+.next {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-60%);
+}
+
+.container-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid #f1f1f1;
+    margin: 0 5px;
+    background: #f1f1f1;
+    cursor: pointer;
+}
+.dot.active {
+    background: rgb(32, 32, 32);
+}
+
+@media screen and (max-width: 600px){
+    .btn-slide{
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+    .btn-slide img{
+        width: 18px;
+        height: 18px;
+    }
+    .dot{
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .btn-slide{
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+    .btn-slide img{
+        width: 15px;
+        height: 15px;
+    }
+    .dot{
+        width: 15px;
+        height: 15px;
+    }
+}

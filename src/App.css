@@ -6,36 +6,3 @@
   margin: 0;
   padding: 0;
 }
-
-/* .wraper{
-  height:68vh;
-  width:95%;
-  margin-left:2.5%;
-  background: linear-gradient(60deg, rgba(58,97,234,1) 0%, rgba(100,216,242,1) 100%);
-  padding-left:1.6rem;
-  padding-right: 1.6rem;
-} */
-
-/* .mainBtns{
-  height:30%;
-  width:42%;
-  display: flex;
-  flex-direction:row;
-  justify-content: center;
-  align-items:center;
-  margin-top:0.5rem; 
-} */
-
-/* .meme-image{
-  width: 30%;
-  height: 60%;
-  margin-left: 0.5rem;
-  box-shadow: 3px 7px 51px -6px rgba(0,0,0,0.69);       
-
-} */
-
-/* .input-field:focus { 
-  outline: none !important;
-  border-color: white;
-  box-shadow: 0 0 10px white;
-} */

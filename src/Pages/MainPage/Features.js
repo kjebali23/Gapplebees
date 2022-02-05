@@ -7,7 +7,7 @@ import Cards from './Cards'
 const Features = () => {
   return (
       <>
-         <Divider divTitle={'How does it work?'}/>
+         <Divider divTitle={"What's on the Menu?"}/>
         
         <div className="feature-wraper">
             <Cards id={1} />

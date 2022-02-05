@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './Slider.css'
+// import './Slider.css'
 import BtnSlider from './BtnSlider'
 import dataSlider from './dataSlider';
 import TinderCard from 'react-tinder-card';
@@ -56,7 +56,7 @@ const Slider = () => {
       <>
        
             
-        <div className='container-slider' style={{background:'rgb(69, 101, 226)'}}>
+        <div className='slider-container'>
             {dataSlider.map((obj, index)=>{
                 return (
                     <div key={obj.id} className={slideIndex === index + 1 ? "slide active-anim" : 'slide'}>
