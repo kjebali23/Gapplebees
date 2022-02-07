@@ -48,8 +48,7 @@ const Footer = () => {
                     <FaTwitter   style={{color:'whitesmoke', fontSize:'1.2rem' , cursor:'pointer'}}/>
                     <FaLinkedin  style={{color:'whitesmoke', fontSize:'1.2rem' , cursor:'pointer'}}/>
                     </div>
-                </div>
-            
+                </div>            
         </div>
     )
 }

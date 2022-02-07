@@ -39,10 +39,7 @@ const PostCard = () => {
                 
             >
                 <div className='card-container'>
-                    {/* <div className='car-owner-info'>
-                        <p>{person.name}</p> 
-                    </div> */}
-                    <Slider/>
+                    <Slider/>                     
                 </div>
             </TinderCard>
             )}

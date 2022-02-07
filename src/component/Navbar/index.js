@@ -15,10 +15,12 @@ const Navbar = () => {
                     <NavLink to="/features" activeStyle > Features </NavLink>
                     <NavLink to="/contact-us" activeStyle > Contact Us </NavLink>
                     <NavLink to="/sign-up" activeStyle > Sign Up </NavLink>
+                    <NavLink to="/race" activeStyle > Race </NavLink>
+
                 </NavMenu>
                 {/* <NavBtn>
                     <NavBtnLink to="sign-in">Sign In</NavBtnLink>
-                </NavBtn> */}
+                </NavBtn> */} 
             </Nav>
         </>
     )

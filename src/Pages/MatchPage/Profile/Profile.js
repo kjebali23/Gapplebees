@@ -3,6 +3,7 @@ import EditProfile from './EditProfile/EditProfile';
 import Paramters from './Parameters/Paramters';
 import AccountSettings from './AccountSettings/AccountSettings';
 import Logout from './Logout/Logout';
+import './ProfileSection.css'
 
 const Profile = (props) => {
 
@@ -26,24 +27,13 @@ const Modal =()=>{
 
   return (
       <>
-        <div className="container" style={{
-            width:'100%',
-            height:'100vh',
-            background:'whitesmoke',
-            display:'flex',
-            flexDirection:'row'
+        <div className="container">
 
-        }}>
-
-          <div className='parameter-section' style={{background:'white', width:'25%' ,
-          borderTop:'solid 3px whitesmoke' 
-          // borderTop:'solid 5px whitesmoke' , 
-          // borderRight:'solid 5px whitesmoke'
-          }}>
+          <div className='parameter-section'>
             <Paramters displayProfile={props.displayProfile}  SettingSection={SettingSection} ProfileSection={ProfileSection} showmodal={Modal}  />
           </div>
 
-          <div className='main-section' style={{background:'whitesmoke', width:'75%', border:'solid 3px whitesmoke'}}>
+          <div className='main-section'>
               
               {section === 1 && <EditProfile/>}
               {section === 2 && <AccountSettings/>}

@@ -13,7 +13,7 @@ const Main = () => {
         
         <>
             <Navbar/>
-        <div className="container" >
+        <div className="main-container" >
             <div className="main-background" >
                 <div className="slogan-holder" >
                     <h1 className='title'>It's never too late to take someone to  Gapplebees.</h1>

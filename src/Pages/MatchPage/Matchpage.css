@@ -67,12 +67,19 @@
     height: 100vh;
     display: flex;
     justify-content: center; 
-    align-items: flex-start;
+    /* align-items: center; */
 }
 
 .cards{
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
+    margin-top: 4rem;
+    /* background: red; */
+    width: 70%;
+    height: 80%;
+    border-radius: 0.8rem;
+    flex-direction: column;
+    align-items: center;
 }
 
 .swipe{
@@ -83,6 +90,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    /* margin-top: 5rem; */
+    /* background: red; */
 }
 
 
@@ -102,10 +111,13 @@
 }
 
 
+
+
 @media screen and (min-width: 900px){
     .swipe {
-        width: 70%;
-        height: 80vh;
+        width: 44rem;
+        height: 52vh;
+        margin-top: 2rem;
       }
     .card-container{
         width: 43.7rem;
@@ -117,6 +129,8 @@
 @media screen and (max-width: 900px){
     .swipe {
         width: 35rem;
+        height: auto;
+        /* margin-top: 4rem; */
       }
     .card-container{
         width: 95%;
@@ -127,6 +141,7 @@
 @media screen and (max-width: 600px){
     .swipe {
         width: 30rem;
+        height: auto;
       }
     .card-container{
         width: 95%;

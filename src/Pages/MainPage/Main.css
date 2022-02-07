@@ -1,5 +1,6 @@
 /* -------- Hero section style ------- */
-.container{
+.main-container{
+    width: 100%;
     height: 83vh;
     display:flex;
     justify-content: center;
@@ -15,7 +16,7 @@
     width: 60%;
     align-self :center;
     text-align:center;
-    height:40%;
+    height:50%;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -55,14 +56,14 @@
 
 
 @media screen and (max-width: 750px){
-    .container {
+    .main-container {
         height: 70vh ;
       }
   }
 
   
   @media screen and (max-width: 700px){
-    .container {
+    .main-container {
         height: 60vh ;
       }
     .main-background {
@@ -78,14 +79,14 @@
 
   @media screen and (max-width: 750px){
     .slogan-holder {
-      height: 23rem;
+      height: 18rem;
       width: 23rem;
     }
   }
   @media screen and (max-width: 600px){
     .slogan-holder {
-      height: 20rem;
-      width: 19rem;
+      height: 19rem;
+      width: 18rem;
     }
   }
 
@@ -99,7 +100,7 @@
 
   @media screen and (max-width: 350px){
     .slogan-holder{
-        width: 17rem;
+        width: 16rem;
     }
     
   }

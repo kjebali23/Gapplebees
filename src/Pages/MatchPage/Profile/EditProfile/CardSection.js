@@ -8,23 +8,14 @@ const Images = [ 'https://images.unsplash.com/photo-1607603750916-eaf866bc907d?i
 const CardSection = () => {
   return (
       <>
-        <div className="cards-container" style={{width:'85%' , height:'24rem', background:'linear-gradient(348deg, rgba(58,97,234,1) 0%, rgba(100,216,242,1) 100%)', marginTop:'1rem' ,
-        display:'flex',
-        flexDirection:'column',
-        borderRadius:'0.5rem'
-        // justifyContent:'space-around',
-        // borderRadius:'0.5rem'
-      }}>
-        <div style={{display:'flex',
-        flexDirection:'row',
-        justifyContent:'space-around',
-        borderRadius:'0.5rem'}}>
+        <div className="cards-section-container">
+        <div className='cards-container'>
         {Images.map((img)=>
           <Card userImage={img}/>
           )}
         </div>
-        <div className='btn-container' style={{ width:'30%', height:'3rem', marginTop:'1rem' ,alignSelf:'center', display:'flex', justifyContent:'center', alignItems:'center'}}>
-          <button style={{width:'65%', height:'2.3rem' , background:'white', border:'none', borderRadius:'0.3rem', fontWeight:'bold'}}>Upload Image</button>
+        <div className='btn-container'>
+          <button>Upload Image</button>
         </div>
         </div>
       
