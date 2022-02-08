@@ -21,7 +21,7 @@ const Dashboard = (props) => {
                 <h1>Gapplebees</h1>
             </div>
 
-            <div className='message-section-btn'>  
+            <div onClick={()=> props.displayMessaging() } className='message-section-btn'>  
               <Badge>
                 <SpeedIcon/>
               </Badge>
