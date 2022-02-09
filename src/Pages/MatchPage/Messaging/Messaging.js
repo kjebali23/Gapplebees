@@ -1,34 +1,56 @@
-import React from 'react';
-import Dashboard from '../Dashboard/Dashboard';
+import React,{useState} from 'react';
 import BackBtn from '../Profile/Parameters/BackBtn';
-// import BackBtn from '../Profile/Parameters/BackBtn';
 import MatchedUser from './MatchedUser'
+import MessagingBox from './MessagingBox';
+
+import './Messaging.css';
+
+
+
+
+
 
 const Messaging = () => {
+    const [usermatchState , setUsermatchState] = useState(0);
+
+    const users=[
+        {
+            id:'0',
+            name:'khalil',
+            Images:[ 'https://images.unsplash.com/photo-1631819825505-4291831187ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWF6ZGElMjBtaWF0YXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60']  ,  
+            Messages:[`user 1's First Message` , 'Second Message', '3rd Message' ,'4th Message' ,'5th Message' ]
+        },
+            {
+            id:'1',
+            name:'Jebali',
+            Images:[ 'https://images.unsplash.com/photo-1607603750916-eaf866bc907d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGJsYWNrJTIwc3VwcmF8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60']   
+            ,Messages:[`user 2's First Message` , 'Second Message', '3rd Message' ] }
+            ,
+            {
+                id:'2',
+                name:'Jebali',
+                Images:[ 'https://images.unsplash.com/photo-1607603750916-eaf866bc907d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGJsYWNrJTIwc3VwcmF8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60']    
+                ,Messages:[`user 3's First Message` , 'Message' ]}
+            ,{
+                id:'3',
+                name:'Jebali',
+                Images:[ 'https://images.unsplash.com/photo-1607603750916-eaf866bc907d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGJsYWNrJTIwc3VwcmF8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60']   
+                ,Messages:[`user 4's First Message` ,'Message' ] }
+            ]
+
   return (
       <>
-       <div style={{background:'whitesmoke' , height:'91.9vh' , width:'100%' , display:'flex' , flexDirection:'row'}}>
-        <div className='user-matches-section' 
-            style={{width:'30%', 
-            background:'white' , 
-            border:'solid 2px whitesmoke' , 
-            height:'100%' , 
-            marginBottom:'0.5rem' , 
-            display:'flex' , 
-            flexDirection:'column' , 
-            alignItems:'center',
-            }}>
+       <div className='messaging-page-container' style={{}}>
+        <div className='user-matchs-section'>
             <BackBtn />
-            <ul style={{padding:'0.5rem' ,marginTop:'0.5rem',width:'90%',height:'100%',overflow:'scroll' , border:'solid 2px whitesmoke', borderRadius:'1rem' , background:'whitesmoke',background: 'linear-gradient(348deg, rgba(58,97,234,1) 0%, rgba(100,216,242,1) 100%)', }}>
-            <MatchedUser/>
+            <ul className='matchs-list'>
+            {users.map((user)=>
+            <MatchedUser userName={user.name} userImage={user.Images} userId={user.id} messageBox={setUsermatchState}/>
+            )}
             </ul>
         </div>
-        <div style={{width:'70%', background:'white' , border:'solid 2px whitesmoke' ,display:'flex' , alignItems:'center' , justifyContent:'center' }}>
-            <div className='message-box-container' style={{height:'90%' , width:'95%',     background: 'linear-gradient(348deg, rgba(58,97,234,1) 0%, rgba(100,216,242,1) 100%)', borderRadius:'2rem', display:'flex' , alignItems:'center' , justifyContent:'center'}}>
-            <div className='message-box' style={{height:'98%' , width:'98%', background:'white' , borderRadius:'1.8rem'}}>
-    
-            </div>
-            </div>
+        <div className='message-box-section'>
+            <MessagingBox usersMessages={users[usermatchState].Messages} />
         </div>
        </div>
       </>
