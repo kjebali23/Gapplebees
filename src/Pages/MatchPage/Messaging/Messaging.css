@@ -52,6 +52,11 @@
     justify-content: space-around;
 }
 
+@media screen and (max-width: 550px){
+    .user-matchs-section {
+      width: 100%;
+    }
+  }
 /* ---------------------------------- Messaging box Section Style -----------------------------------*/
 .message-box-section{
     width: 70%;
@@ -70,6 +75,7 @@
     display: flex; 
     align-items: center; 
     justify-content: center;
+    
 }
 
 .message-box{
@@ -80,3 +86,56 @@
     padding-top: 1rem;
     padding-left: 2rem;
 }
+.empty-message-box{
+    height: 70%;
+    width: 70%; 
+    background: linear-gradient(348deg, rgba(58,97,234,1) 0%, rgba(100,216,242,1) 100%); 
+    border-radius: 1.8rem;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    justify-content: space-around;
+    box-shadow: 0px 0px 10px 0px rgba(197, 196, 196, 0.911);
+
+}
+
+.empty-message-box-title{
+    background: white;
+    width: 80%; 
+    height: 13%; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    border-radius: 1rem;
+    box-shadow: 0px 0px 41px 0px rgba(173,176,245,1);
+}
+
+.empty-message-box-title h1{
+    text-align: center;
+    color: rgb(69, 101, 226);
+}
+
+.instructions{
+    text-align: center;
+     width: 80%; 
+     height: 60%;
+     display: flex;
+     flex-direction: column; 
+     justify-content: flex-start;
+}
+
+.instructions p{
+    padding-bottom: 0.5rem;
+    color: white; 
+    font-size: 19px;
+}
+
+@media screen and (max-width: 550px){
+    .message-box-section {
+      width: 100%;
+    }
+  }
+
