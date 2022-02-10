@@ -60,7 +60,7 @@ const Messaging = () => {
                 <h1>This is your messaging Section:</h1>
                 </div>
                 <div className='instructions'>
-                    <p>Here you can find your matchs and conversations.</p>
+                    {/* <p>Here you can find your matchs and conversations.</p> */}
                     <p>Click on a user from the massages list on the left to display your conversation. </p>
                 </div>
             </div>}

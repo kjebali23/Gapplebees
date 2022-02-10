@@ -39,10 +39,21 @@ const PostCard = () => {
                 
             >
                 <div className='card-container'>
-                    <Slider/>                     
+                    <Slider/>  
+                    
                 </div>
             </TinderCard>
             )}
+            <div className='empty-card'>
+                <div className='text-container'>
+                <h2>That is all for today !</h2>
+                <p>You have hit the daily limit.<br/> Please comeback tomorrow to see more.</p>
+                </div>
+                <div className='upgrade-container'>
+                <p>Would you be interested in upgrading to see more cars ?</p>
+                <button className='upgrade-btn'>Send a request</button>
+                </div>
+            </div>  
         </div>
 </>        
   )
