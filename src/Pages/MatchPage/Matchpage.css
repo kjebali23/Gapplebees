@@ -66,8 +66,18 @@
     width: 100%; 
     height: 100vh;
     display: flex;
-    justify-content: center; 
+    justify-content: flex-start; 
+    /* margin-bottom: 5rem; */
     /* align-items: center; */
+}
+.Cards-section-container{
+    /* background: black; */
+    width: 100%;
+    height: 41.5rem; 
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start;
+    flex-direction: row;
 }
 
 .cards{
@@ -97,12 +107,17 @@
 
 .card-container{
     width: 95%;
-    background: pink;
+    background: white;
     display: flex;
     flex-direction: column; 
     align-items: center;
     justify-content: center;
     border-radius: 1rem;
+    margin-top: 15%;
+    position: relative;
+    background: white;
+    box-shadow: 0px 0px 10px 0px rgba(240,240,240,1);
+
 }
 
 .card-container p{
@@ -119,6 +134,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 2rem;
 }
 .text-container{
     text-align: center;
@@ -165,18 +181,103 @@
     color: white;
 }
 
+.swipe-buttons-container{
+    position: relative; 
+    align-self: flex-end;
+    width: 15rem;
+    height: 7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.swipe-btn{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    border:none;
+    background: white;
+    box-shadow: 0px 0px 10px 0px rgba(229,230,235,0.75);
+
+}
+
+.user-avatar{
+    width: 50%;
+    height: 90%;
+    /* background: pink; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.user-avatar h3{
+    color: white;
+    margin-left: 0.5rem;
+}
+
+.user-avatar img{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.car-owner-info{
+    margin-top: 0.5rem;
+    background: linear-gradient(100deg, rgba(58,97,234,1) 0%, rgba(100,216,242,1) 100%);
+    width: 98%; 
+    height: 15%; 
+    padding-left: 0.5rem; 
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.car-info{
+    background: none;
+    height: 50%; 
+    width: 40%; 
+    border-radius: 0.5rem; 
+    margin-right: 0.5rem;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-evenly;
+    align-items: center;
+    /* background: pink; */
+}
+
+.car-info p{
+    width: 27%; 
+    height: 90%;
+    background: white; 
+    border-radius: 0.5rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    font-weight: bold;
+    /* padding: 0.5rem; */
+}
+
+
+
 
 
 
 @media screen and (min-width: 900px){
     .swipe {
         width: 44rem;
-        height: 52vh;
+        height: 25rem;
         margin-top: 2rem;
       }
     .card-container{
         width: 43.7rem;
         height: 32.2rem;
+    }
+    .matchpage{
+        height: 122vh;
     }
 }
 
@@ -184,43 +285,70 @@
 @media screen and (max-width: 900px){
     .swipe {
         width: 35rem;
-        height: auto;
+        height: 24rem;
         /* margin-top: 4rem; */
       }
     .card-container{
         width: 95%;
         height: 27rem;
     }
+    .Cards-section-container{
+        height: 35.5rem;
+    }
 }
 
 @media screen and (max-width: 600px){
     .swipe {
         width: 30rem;
-        height: auto;
+        height: 24rem;
       }
     .card-container{
         width: 95%;
         height: 27rem;
+    }
+    .Cards-section-container{
+        height: 35rem;
+    }
+    .car-info p{
+        width:31%;
+    }
+    .user-avatar img{
+        width: 3rem;
+        height: 3rem;
+    }
+    .car-info{
+        width: 50%;
     }
 }
 
 @media screen and (max-width: 500px){
     .swipe {
         width: 26rem;
+        height: 23rem;
       }
     .card-container{
         width: 95%;
         height: 25rem;
+    }
+    .Cards-section-container{
+        height: 33rem;
     }
 }
 
 @media screen and (max-width: 410px){
     .swipe {
         width: 22rem;
+        height: 24rem;
       }
     .card-container{
         width: 95%;
         height: 25rem;
+    }
+    .Cards-section-container{
+        height: 33.2rem;
+    }
+    .car-info{
+        font-size: 13px;
     }
 }
 
@@ -247,11 +375,11 @@
 
 .slider-container {
     max-width: 700px;
-    width: 100%;
-    height: 100%;
+    width: 98%;
+    height: 80%;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
     background: rgb(69, 101, 226);
     border-radius: 1rem;
 

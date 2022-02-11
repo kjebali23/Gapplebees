@@ -10,12 +10,14 @@ import PostCard from './PostCard';
 
 const Match = () => {
   return (
-        <div className='match-container'>
+    <>
+        {/* <div className='match-container'> */}
                 {/* <div> */}
                    <PostCard/>
                 {/* </div> */}
 
-            </div>
+            {/* </div> */}
+            </>
   )
 };
 

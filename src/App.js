@@ -6,7 +6,7 @@ import Features from './Pages/MainPage/Features';
 import Contact from './Pages/MainPage/Contact';
 import MatchPage from './Pages/MatchPage';
 // import Messaging from './Pages/MatchPage/Messaging/Messaging';
-import Test from './Pages/MatchPage/Messaging/Test'
+import Simple from './Pages/MatchPage/Messaging/Test'
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
           <Route path='/Features'  element={<Features/>}/>
           <Route path='/Contact-Us'  element={<Contact/>}/>
           <Route path='/Race'  element={<MatchPage/>}/>  
-          <Route path='/test'  element={<Test/>}/>
+          <Route path='/test'  element={<Simple/>}/>
         </Routes>
       </Router>
     </>
