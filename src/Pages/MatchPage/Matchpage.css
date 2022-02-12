@@ -3,7 +3,7 @@
     flex-direction: column;
     background: whiteSmoke;
     width: 100%;
-    height: 100vh;
+    height: 108vh;
 }
 
 /*---------------------------------- Header Section Style -------------------------- */
@@ -25,6 +25,19 @@
     flex-direction: row ;
     align-items:center ;
     width: 33%;
+    height: 80%;
+}
+
+.click-user-info{
+    display: flex;
+    flex-direction: row ;
+    align-items:center ;
+    /* justify-content: center; */
+    width: 10rem;
+    height: 100%;
+    background: whitesmoke;
+    padding-left: 0.5rem ;
+    border-radius: 2rem;
 }
 
 .user-name{
@@ -43,6 +56,18 @@
     width: 33%;
     display: flex;
     justify-content: flex-end;
+    /* background: cornflowerblue; */
+    height: 80%;
+    align-items: center;
+}
+.click-message-section-btn{
+    background: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.8rem;
+    width: 5rem;
+    border-radius: 2rem;
 }
 
 @media screen and (max-width: 600px){
@@ -57,6 +82,34 @@
     }
     .message-section-btn{
         width: 15%;
+    }
+    .click-user-info{
+        width: 3.5rem;
+    }
+}
+@media screen and (max-width: 400px){
+    /* .user-name{
+        display: none;
+    }
+    .dashboard-title{
+        width: 70%;
+    }
+    .user-info{
+        width: 15%;
+    } */
+    /* .message-section-btn{
+        width: 15%;
+    } */
+    .click-user-info{
+        width: 3rem;
+        height: 3rem;
+        padding-left: 0%;
+        justify-content: center;
+    }
+    .click-message-section-btn{ 
+        height: 2.5rem;
+        width: 2.5rem;
+        border-radius: 2rem;
     }
 }
 
@@ -143,22 +196,23 @@
     justify-content: space-evenly;
     align-items: center;
     background: whitesmoke;
-    height: 26%;
-    width: 70%;
+    height: 9.5rem;
+    width: 35rem;
     padding: 1rem;
     border-radius: 1rem;
     box-shadow: 0px 0px 1px 0px rgba(173,176,245,1);
 
 }
 .upgrade-container{
-    width: 80%;
+    width: 28rem;
     margin-top: 3rem;
     /* background: chartreuse; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    height: 15%;
+    height: 5rem;
+    text-align: center;
 }
 
 .upgrade-container p{
@@ -166,8 +220,8 @@
 }
 
 .upgrade-btn{
-    width: 30%;
-    height: 50%;
+    width: 13rem;
+    height: 2.8rem;
     background: white;
     border-radius: 0.5rem;
     border: solid 1px white;
@@ -277,7 +331,7 @@
         height: 32.2rem;
     }
     .matchpage{
-        height: 122vh;
+        height: 108vh;
     }
 }
 
@@ -294,6 +348,34 @@
     }
     .Cards-section-container{
         height: 35.5rem;
+    }
+    .text-container{
+        height: 9.5rem;
+        width: 30rem;
+        
+    
+    }
+    .upgrade-container{
+        width: 23rem;        
+        height: 6rem;
+        margin-top: 2rem ;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .text-container{
+        height: 9.5rem;
+        width: 22rem;
+        
+    
+    }
+    .upgrade-container{
+        width: 20rem;        
+        height: 6rem;
+        margin-top: 2rem ;
+    }
+    .upgrade-btn{
+        width:8rem;
     }
 }
 
@@ -318,6 +400,18 @@
     }
     .car-info{
         width: 50%;
+    }
+    .text-container{
+        height: 9.5rem;
+        width: 17rem;
+    }
+    .upgrade-container{
+        width: 16rem;        
+        height: 6rem;
+        margin-top: 2rem ;
+    }
+    .upgrade-btn{
+        width:8rem;
     }
 }
 
@@ -349,6 +443,21 @@
     }
     .car-info{
         font-size: 13px;
+    }
+    .empty-card{
+        width: 90%;
+    }
+    .text-container{
+        height: 9.5rem;
+        width: 17rem;
+    }
+    .upgrade-container{
+        width: 16rem;        
+        height: 6rem;
+        margin-top: 2rem ;
+    }
+    .upgrade-btn{
+        width:8rem;
     }
 }
 

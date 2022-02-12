@@ -1,6 +1,6 @@
 .messaging-page-container{
     background: whitesmoke;
-    height: 91.9vh ; 
+    height: 100% ; 
     width: 100%; 
     display: flex; 
     flex-direction: row;
@@ -41,6 +41,12 @@
     box-shadow: 0px 0px 41px 0px rgba(173,176,245,1);
 }
 
+.list-item img{
+    width: 3.7rem;
+    height: 3.7rem; 
+    border-radius: 50%;
+}
+
 .match-info{
     width: 50%;
     height: 60%;
@@ -52,9 +58,34 @@
     justify-content: space-around;
 }
 
+@media screen and (max-width: 850px){
+    .list-item p{
+        font-size: 14px;
+    }  
+  }
+
+  @media screen and (max-width: 700px){
+    .list-item img{
+        height: 3.2rem;
+        width: 3.2rem;
+    }
+    .matchs-list{
+        width: 99%;
+    }
+    .list-item p{
+        display: none;
+    }
+  }
 @media screen and (max-width: 550px){
     .user-matchs-section {
       width: 100%;
+    }
+    .list-item p{
+        display: block;
+    }
+    .list-item img{
+        height: 3.2rem;
+        width: 3.2rem;
     }
   }
 /* ---------------------------------- Messaging box Section Style -----------------------------------*/
@@ -75,11 +106,13 @@
     display: flex; 
     align-items: center; 
     justify-content: center;
+    display: flex;
+    flex-direction: column;
     
 }
 
 .message-box{
-    height: 98%;
+    height: 92%;
     width: 98%; 
     background: white; 
     border-radius: 1.8rem;
@@ -105,12 +138,13 @@
 .empty-message-box-title{
     background: white;
     width: 80%; 
-    height: 13%; 
+    height: 15%; 
     display: flex; 
     justify-content: center;
     align-items: center; 
     border-radius: 1rem;
     box-shadow: 0px 0px 41px 0px rgba(173,176,245,1);
+    padding: 0.5rem;
 }
 
 .empty-message-box-title h1{
@@ -133,9 +167,68 @@
     font-size: 19px;
 }
 
+.message-box-header{
+    width: 100%; 
+    height: 2.5rem; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* background: red; */
+}
+
+.match-name{
+    /* margin-left: 3.4rem; */
+    height: 2.5rem;
+    width: 50%;
+    color: white;
+    font-weight: bold; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    /* background: pink; */
+}
+
+.back-icon{
+    display: none;
+}
+
+@media screen and (max-width: 1000px){
+    .empty-message-box-title {
+      height: 18%;
+    }
+    
+  }
+
+  @media screen and (max-width: 900px){
+    .empty-message-box-title {
+      height: 22%;
+    }
+    
+  }
+
+  @media screen and (max-width: 850px){
+    .empty-message-box {
+      width:80%;
+    }
+    
+  }
+
+
 @media screen and (max-width: 550px){
     .message-box-section {
       width: 100%;
     }
+    .back-icon{
+        display: block;
+        display: flex;
+        position: relative;
+        /* top:14.2%;
+        left: 10%; */
+        /* justify-content: center; */
+    }
+    /* .message-box-section{
+        display: none;
+    } */
   }
 

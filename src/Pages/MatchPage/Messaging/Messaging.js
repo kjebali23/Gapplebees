@@ -2,18 +2,17 @@ import React,{useState} from 'react';
 import BackBtn from '../Profile/Parameters/BackBtn';
 import MatchedUser from './MatchedUser'
 import MessagingBox from './MessagingBox';
-
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import './Messaging.css';
-import { textAlign } from '@mui/system';
 
 
 
 
 
 
-const Messaging = () => {
+const Messaging = (props) => {
     const [usermatchState , setUsermatchState] = useState(null);
-    console.log(usermatchState)
+    // console.log(usermatchState)
     const users=[
         {
             id:'1',
@@ -40,13 +39,17 @@ const Messaging = () => {
             ]
 
   let width = window.innerWidth;
-  if(width > 500){
+  if(width > 550){
     return (
       <>
 
        <div className='messaging-page-container'>
         <div className='user-matchs-section'>
-            <BackBtn />
+            {/* <BackBtn displayMessaging={displayMessaging} /> */}
+            <div className='back-btn' onClick={()=>props.displayMessaging()}>
+                <ArrowBackIosIcon/>
+                <h4>Go back to the main page</h4>
+            </div>    
             <ul className='matchs-list'>
             {users.map((user)=>
             <MatchedUser userName={user.name} userImage={user.Images} userId={user.id} messageBox={setUsermatchState}/>
@@ -74,13 +77,15 @@ const Messaging = () => {
   )
 }
   else{
-    //   const [displaymessage , setDisplayMessage]= useState(false)
     
       return(
     <div className='messaging-page-container'>
     {usermatchState === null &&
     <div className='user-matchs-section'>
-        <BackBtn />
+        <div className='back-btn' onClick={()=>props.displayMessaging()}>
+                <ArrowBackIosIcon/>
+                <h4>Go back to the main page</h4>
+            </div>  
         <ul className='matchs-list'>
         {users.map((user)=>
         <MatchedUser userName={user.name} userImage={user.Images} userId={user.id} messageBox={setUsermatchState} 
@@ -91,7 +96,7 @@ const Messaging = () => {
     
     {usermatchState !== null &&
     <div className='message-box-section'>
-        <MessagingBox usersMessages={users[usermatchState].Messages} />
+        <MessagingBox usersMessages={users[usermatchState].Messages}  displayMessaging={props.displayMessaging}/>
     </div>}
    
    </div>

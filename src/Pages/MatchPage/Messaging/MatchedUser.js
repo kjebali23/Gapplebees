@@ -12,7 +12,7 @@ const MatchedUser = (props) => {
   return (
       <>
                 <li className='list-item' onClick={()=> changeMatch(props.userId)} >
-                    <img src={props.userImage} style={{width:'3.7rem' , height:'3.7rem' , borderRadius:'50%'}} />
+                    <img src={props.userImage} />
                 
                 <div className='match-info'>
                     <h3>{props.userName}</h3>
