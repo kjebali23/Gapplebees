@@ -1,18 +1,16 @@
 import React,{useState} from 'react';
-import BackBtn from '../Profile/Parameters/BackBtn';
 import MatchedUser from './MatchedUser'
 import MessagingBox from './MessagingBox';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import './Messaging.css';
+import BackBtn from '../Profile/Parameters/BackBtn';
 
 
 
 
 
+const Messaging = () => {
 
-const Messaging = (props) => {
     const [usermatchState , setUsermatchState] = useState(null);
-    // console.log(usermatchState)
     const users=[
         {
             id:'1',
@@ -45,11 +43,7 @@ const Messaging = (props) => {
 
        <div className='messaging-page-container'>
         <div className='user-matchs-section'>
-            {/* <BackBtn displayMessaging={displayMessaging} /> */}
-            <div className='back-btn' onClick={()=>props.displayMessaging()}>
-                <ArrowBackIosIcon/>
-                <h4>Go back to the main page</h4>
-            </div>    
+            <BackBtn/>
             <ul className='matchs-list'>
             {users.map((user)=>
             <MatchedUser userName={user.name} userImage={user.Images} userId={user.id} messageBox={setUsermatchState}/>
@@ -63,7 +57,6 @@ const Messaging = (props) => {
                 <h1>This is your messaging Section:</h1>
                 </div>
                 <div className='instructions'>
-                    {/* <p>Here you can find your matchs and conversations.</p> */}
                     <p>Click on a user from the massages list on the left to display your conversation. </p>
                 </div>
             </div>}
@@ -82,10 +75,7 @@ const Messaging = (props) => {
     <div className='messaging-page-container'>
     {usermatchState === null &&
     <div className='user-matchs-section'>
-        <div className='back-btn' onClick={()=>props.displayMessaging()}>
-                <ArrowBackIosIcon/>
-                <h4>Go back to the main page</h4>
-            </div>  
+        <BackBtn/> 
         <ul className='matchs-list'>
         {users.map((user)=>
         <MatchedUser userName={user.name} userImage={user.Images} userId={user.id} messageBox={setUsermatchState} 
@@ -96,7 +86,7 @@ const Messaging = (props) => {
     
     {usermatchState !== null &&
     <div className='message-box-section'>
-        <MessagingBox usersMessages={users[usermatchState].Messages}  displayMessaging={props.displayMessaging}/>
+        <MessagingBox usersMessages={users[usermatchState].Messages}/>
     </div>}
    
    </div>

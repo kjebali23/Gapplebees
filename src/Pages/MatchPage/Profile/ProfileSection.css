@@ -50,6 +50,10 @@
     color: black;
 }
 
+.back-btn:hover{
+    background: whitesmoke;
+}
+
 .params-container{
     display: flex;
     height: 15rem ;

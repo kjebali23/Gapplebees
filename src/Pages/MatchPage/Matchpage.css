@@ -40,6 +40,10 @@
     border-radius: 2rem;
 }
 
+.click-user-info:hover{
+    background: rgb(220,220,220);
+}
+
 .user-name{
     margin-left: 0.5rem;
 }
@@ -68,6 +72,9 @@
     height: 2.8rem;
     width: 5rem;
     border-radius: 2rem;
+}
+.click-message-section-btn:hover{
+    background: rgb(220,220,220);
 }
 
 @media screen and (max-width: 600px){

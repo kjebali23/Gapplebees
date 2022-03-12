@@ -1,23 +1,36 @@
 import React from 'react';
 import PostCard from './PostCard';
-// import { Stack } from '@mui/material';
-// import CheckIcon from '@mui/icons-material/Check';
-// import ClearIcon from '@mui/icons-material/Clear';
-// import Profile from '../Profile/Profile';
+import { useQuery ,gql } from '@apollo/client';
 
 
-
+const getBots = gql`
+  query{
+  getProfiles{
+    UserName
+    Images
+  }
+}
+`
 
 const Match = () => {
+
+  const {error , data , loading} = useQuery(getBots);
+  // console.log({error , loading , data});
+  // console.log(data.getProfiles)
+
+  // data.getProfiles.map((profiles)=>{
+  //   console.log(profiles.UserName);
+  // })
+
+  // Create a standalone component for the error.
+  
+  if(error){return <div>Something went wrong</div>}
   return (
     <>
-        {/* <div className='match-container'> */}
-                {/* <div> */}
-                   <PostCard/>
-                {/* </div> */}
-
-            {/* </div> */}
-            </>
+      <PostCard 
+      // botData ={data.getProfiles}
+      />
+    </>
   )
 };
 

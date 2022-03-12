@@ -1,10 +1,9 @@
-
 import Slider from '../Match/Slider/Slider'
 import React, { useState, useMemo, useRef } from 'react'
-// import TinderCard from '../react-tinder-card/index'
 import TinderCard from 'react-tinder-card';
 import SportsScoreIcon from '@mui/icons-material/SportsScore';
 import CloseIcon from '@mui/icons-material/Close';
+
 
 
 
@@ -12,8 +11,8 @@ const db=[
     {
         name:'khalil',
         url:  'https://images.unsplash.com/photo-1631819825505-4291831187ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWF6ZGElMjBtaWF0YXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60' 
-        ,car:'Mazda',
-        model:'miata'
+        ,car:'Toyota',
+        model:'supra'
         },
     {
         name:'jebali',
@@ -25,19 +24,19 @@ const db=[
         {
             name:'hamza',
             url: 'https://images.unsplash.com/photo-1607603750916-eaf866bc907d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGJsYWNrJTIwc3VwcmF8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60' 
-            ,car:'Mazda',
-            model:'miata'    
+            ,car:'Opel',
+            model:'astra'    
         }
         ,{
             name:'mourad',
             url:'https://images.unsplash.com/photo-1607603750916-eaf866bc907d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGJsYWNrJTIwc3VwcmF8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60' 
-            ,car:'Mazda',
-            model:'miata'
+            ,car:'peugeot',
+            model:'208'
         },{
             name:'lynou',
             url:'https://images.unsplash.com/photo-1607603750916-eaf866bc907d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGJsYWNrJTIwc3VwcmF8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60' 
-            ,car:'Mazda',
-            model:'miata'
+            ,car:'Ferrari',
+            model:'roma'
         }
     
 ]

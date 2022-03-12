@@ -4,46 +4,25 @@ import Paramters from './Parameters/Paramters';
 import AccountSettings from './AccountSettings/AccountSettings';
 import Logout from './Logout/Logout';
 import './ProfileSection.css'
+import { useSelector} from 'react-redux';
 
-const Profile = (props) => {
 
-const [section , setSection]= useState(1)
-
-const [logoutModal , setLogoutModal] = useState(false)
-
-const ProfileSection =()=>{
-  setSection(1)
-}
-
-const SettingSection =()=>{
-  setSection(2)
-}
-
-const Modal =()=>{
-  setLogoutModal(true)
-}
-
+const Profile = () => {
+  const params = useSelector((state) => state.parameter.value);
 
 
   return (
       <>
         <div className="container">
-
           <div className='parameter-section'>
-            <Paramters displayProfile={props.displayProfile}  SettingSection={SettingSection} ProfileSection={ProfileSection} showmodal={Modal}  />
+            <Paramters/>
           </div>
 
-          <div className='main-section'>
-              
-              {section === 1 && <EditProfile/>}
-              {section === 2 && <AccountSettings/>}
-              
-              { logoutModal === true &&  <Logout showmodal={setLogoutModal}/>}
-
-              
-
+          <div className='main-section'>       
+              {params === 1 && <EditProfile/>}
+              {params === 2 && <AccountSettings/>}
+              { params === 3 &&  <Logout/>} 
           </div>
-
         </div>
       </>
   )

@@ -3,16 +3,26 @@ import ParamBtn from './ParamBtn';
 import BackBtn from './BackBtn';
 
 
-const Paramters = (props) => {
+
+const Paramters = () => {
 
 
   return (
       <>
-        <BackBtn displayProfile={props.displayProfile} />
+        <BackBtn/>
         <div className="params-container">
-            <ParamBtn ProfileSection={props.ProfileSection} id={1}  btnName={'Edit Profile'}/>
-            <ParamBtn SettingSection={props.SettingSection} id={2} btnName={'Settings'}/>
-            <ParamBtn showmodal={props.showmodal} id={3} btnName={'Log out'}/>            
+            <ParamBtn 
+            id={1}  
+            btnName={'Edit Profile'}
+            />
+            <ParamBtn 
+            id={2} 
+            btnName={'Settings'}
+            />
+            <ParamBtn 
+            id={3} 
+            btnName={'Log out'} 
+            />            
         </div>
       </>
   )

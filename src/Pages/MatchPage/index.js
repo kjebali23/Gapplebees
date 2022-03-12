@@ -1,32 +1,23 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Dashboard from './Dashboard/Dashboard';
 import Match from './Match/Match';
 import Profile from './Profile/Profile';
 import Messaging from './Messaging/Messaging';
 import './Matchpage.css';
+import { useSelector } from 'react-redux';
 
 export default function SimpleContainer() {
-  
-  const [profileSection, setProfileSection]= useState(false);
-  const [messagingSection , setMessagingSection] = useState(false);
 
+  const displayPage = useSelector((state) => state.counter.value)
 
-  const renderProfile = ()=>{
-    setProfileSection(!profileSection);
-  }
-
-  const renderMessagingSection = ()=>{
-    setMessagingSection(!messagingSection);
-  }
 
 
   return (
     <div className='matchpage' >
-    <Dashboard displayProfile={renderProfile} displayMessaging={renderMessagingSection} />
-    {profileSection === false && messagingSection === false &&  <Match/>  }
-    {profileSection === true &&  <Profile displayProfile={renderProfile}  />}
-    {messagingSection === true && profileSection === false && <Messaging displayMessaging={renderMessagingSection}/>}
+    <Dashboard/>
+    {displayPage === 0 && <Match/>}
+    {displayPage === 1 && <Profile/>}
+    {displayPage ===2 && <Messaging/>}
     </div>
 )
   }
-
