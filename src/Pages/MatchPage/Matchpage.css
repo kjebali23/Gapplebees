@@ -300,13 +300,14 @@
 .car-info{
     background: none;
     height: 50%; 
-    width: 40%; 
+    width: 60%; 
     border-radius: 0.5rem; 
     margin-right: 0.5rem;
     display: flex;
     flex-direction: row; 
     justify-content: space-evenly;
     align-items: center;
+    font-size: 11px;
     /* background: pink; */
 }
 

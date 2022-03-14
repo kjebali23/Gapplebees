@@ -5,51 +5,15 @@ import SportsScoreIcon from '@mui/icons-material/SportsScore';
 import CloseIcon from '@mui/icons-material/Close';
 
 
-
-
-const db=[
-    {
-        name:'khalil',
-        url:  'https://images.unsplash.com/photo-1631819825505-4291831187ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWF6ZGElMjBtaWF0YXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60' 
-        ,car:'Toyota',
-        model:'supra'
-        },
-    {
-        name:'jebali',
-        url: 'https://images.unsplash.com/photo-1607603750916-eaf866bc907d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGJsYWNrJTIwc3VwcmF8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60' 
-        ,car:'Mazda',
-        model:'miata'
-    }
-        ,
-        {
-            name:'hamza',
-            url: 'https://images.unsplash.com/photo-1607603750916-eaf866bc907d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGJsYWNrJTIwc3VwcmF8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60' 
-            ,car:'Opel',
-            model:'astra'    
-        }
-        ,{
-            name:'mourad',
-            url:'https://images.unsplash.com/photo-1607603750916-eaf866bc907d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGJsYWNrJTIwc3VwcmF8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60' 
-            ,car:'peugeot',
-            model:'208'
-        },{
-            name:'lynou',
-            url:'https://images.unsplash.com/photo-1607603750916-eaf866bc907d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGJsYWNrJTIwc3VwcmF8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60' 
-            ,car:'Ferrari',
-            model:'roma'
-        }
-    
-]
-
-function PostCard () {
-  const [currentIndex, setCurrentIndex] = useState(db.length - 1)
+function PostCard (props) {
+  const [currentIndex, setCurrentIndex] = useState(props.botData.length - 1)
   const [lastDirection, setLastDirection] = useState()
   // used for outOfFrame closure
   const currentIndexRef = useRef(currentIndex)
 
   const childRefs = useMemo(
     () =>
-      Array(db.length)
+      Array(props.botData.length)
         .fill(0)
         .map((i) => React.createRef()),
     []
@@ -60,7 +24,7 @@ function PostCard () {
     currentIndexRef.current = val
   }
 
-  const canGoBack = currentIndex < db.length - 1
+  // const canGoBack = currentIndex < props.botData.length - 1
 
   const canSwipe = currentIndex >= 0
 
@@ -80,7 +44,7 @@ function PostCard () {
   }
 
   const swipe = async (dir) => {
-    if (canSwipe && currentIndex < db.length) {
+    if (canSwipe && currentIndex < props.botData.length) {
       await childRefs[currentIndex].current.swipe(dir) // Swipe the card!
     }
   }
@@ -92,26 +56,26 @@ function PostCard () {
     <div className='match-container' >
       
       <div className='Cards-section-container'>
-        {db.map((character, index) => (
+        {props.botData.map((profile, index) => (
           <TinderCard
             ref={childRefs[index]}
             className='swipe'
-            key={character.name}
-            onSwipe={(dir) => swiped(dir, character.name, index)}
-            onCardLeftScreen={() => outOfFrame(character.name, index)}
+            key={profile.name}
+            onSwipe={(dir) => swiped(dir, profile.UserName, index)}
+            onCardLeftScreen={() => outOfFrame(profile.UserName, index)}
           >
               <div className='card-container'>
             
-                <Slider/>
+                <Slider Images={profile.Images} />
                 <div className='car-owner-info'>
                     <div className='user-avatar'>
-                     <img src={character.url} />   
-                     <h3>{character.name}</h3>
+                     <img src={profile.Images[0]} />   
+                     <h3>{profile.UserName}</h3>
                     </div>
                      <div className='car-info'>
-                     <p>{character.car}</p>
-                     <p>{character.model}</p>
-                     <p>2000</p>
+                     <p>{profile.CarManufacturer}</p>
+                     <p>{profile.CarModel}</p>
+                     <p>{profile.CarProductionYear}</p>
                      </div>
                 </div>
             </div>

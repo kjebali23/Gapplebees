@@ -8,6 +8,9 @@ const getBots = gql`
   getProfiles{
     UserName
     Images
+    CarManufacturer
+    CarModel
+    CarProductionYear
   }
 }
 `
@@ -15,20 +18,13 @@ const getBots = gql`
 const Match = () => {
 
   const {error , data , loading} = useQuery(getBots);
-  // console.log({error , loading , data});
-  // console.log(data.getProfiles)
-
-  // data.getProfiles.map((profiles)=>{
-  //   console.log(profiles.UserName);
-  // })
-
-  // Create a standalone component for the error.
-  
+  if (loading){return <div>Loading...</div> }
   if(error){return <div>Something went wrong</div>}
+
   return (
     <>
       <PostCard 
-      // botData ={data.getProfiles}
+      botData ={data.getProfiles}
       />
     </>
   )
