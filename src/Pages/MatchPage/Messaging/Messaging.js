@@ -3,12 +3,11 @@ import MatchedUser from './MatchedUser'
 import MessagingBox from './MessagingBox';
 import './Messaging.css';
 import BackBtn from '../Profile/Parameters/BackBtn';
+import {useInfo} from '../../../Hooks/useUserData'
 
 
 
-
-
-const Messaging = () => {
+const Messaging = (props) => {
 
     const [usermatchState , setUsermatchState] = useState(null);
     const users=[
@@ -37,6 +36,12 @@ const Messaging = () => {
             ]
 
   let width = window.innerWidth;
+
+
+
+  console.log(props)
+  
+  
   if(width > 550){
     return (
       <>
