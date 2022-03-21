@@ -3,8 +3,8 @@ import { useInfo } from '../../../Hooks/useUserData';
 
 const MatchedUser = (props) => {
 
-    const changeMatch =(id)=>{
-        props.messageBox(id - 1);
+    const changeConversation =()=>{
+        props.conversation(props.match);
     }
     // const displayMessage=()=>{
     //     props.changeDisplayMessage(!props.messageState)
@@ -20,7 +20,9 @@ const MatchedUser = (props) => {
 
   return (
       <>
-                <li className='list-item' onClick={()=> changeMatch(props.userId)} >
+                <li className='list-item' 
+                onClick={()=> changeConversation()} 
+                >
                     <img src={matchInfo.Images[0]} />
                 
                 <div className='match-info'>

@@ -1,0 +1,114 @@
+.login-page{
+    background:whiteSmoke;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+}
+
+.page-title{
+    margin-top: 3%;
+    color: rgb(69, 101, 226);
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.login-container{
+    background: linear-gradient(348deg, rgba(58,97,234,1) 0%, rgba(100,216,242,1) 100%);
+    width : 30%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    padding-top: 1rem; 
+    border-radius: 2rem; 
+    margin-top: 4rem; 
+}
+
+.auth-form{
+    width: 80%;
+    height: 60%; 
+    display: flex; 
+    align-items: center; 
+    flex-direction: column; 
+    justify-content: space-evenly; 
+    margin-top: 1.5rem;
+}
+
+.form-title{
+    color: white;
+}
+
+.form-section-container{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-items: center;
+    /* background-color: white; */
+}
+
+.form-section-container label{
+    align-self: flex-start;
+}
+
+
+.form-section-container input{
+    width: 15rem;
+    height: 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    margin-top: 0.3rem;
+}
+
+
+
+.auth-form-btn{
+    width: 5rem;
+    height: 2.3rem;
+    border: none;
+    border-radius: 0.5rem;
+    margin-top: 0.3rem;
+}
+
+.alternative-method{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin-top: 1rem; 
+    border-top: solid 1px black;
+    margin-top: 1rem; 
+    padding-top: 1rem;
+}
+
+.connection-methods{
+    display: flex; 
+    flex-direction: row; 
+    width: 100%;
+    justify-content: center;
+}
+
+.social-container{
+    width: 35%;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-evenly; 
+    height: 3rem; 
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.connection-prov-logo{
+    background: whiteSmoke;
+    width: 3rem; 
+    height: 3rem;
+    border-radius: 0.5rem;
+}
+
+.redirect-link{
+    margin-top: 1.7rem;
+    color: white;
+
+}

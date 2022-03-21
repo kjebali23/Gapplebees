@@ -7,8 +7,8 @@ import BackBtn from '../Profile/Parameters/BackBtn';
 
 const Messaging = (props) => {
 
-    const [usermatchState , setUsermatchState] = useState(null);
-    
+    const [usermatchState , setUsermatchState] = useState(true);
+    const [conversation , setConversation] = useState("620fbdcbe76c5d446fa43907");
 
   let width = window.innerWidth;
   
@@ -21,12 +21,12 @@ const Messaging = (props) => {
             <BackBtn/>
             <ul className='matchs-list'>
             {props.userMatchs.map((match)=>
-            <MatchedUser match={match}/>
+            <MatchedUser match={match} MessageBox={setUsermatchState}  conversation={setConversation} />
             )}
             </ul>
         </div>
         <div className='message-box-section'>
-            { usermatchState === null &&
+            { usermatchState === false &&
             <div className='empty-message-box'>
                 <div className='empty-message-box-title'>
                 <h1>This is your messaging Section:</h1>
@@ -35,10 +35,8 @@ const Messaging = (props) => {
                     <p>Click on a user from the massages list on the left to display your conversation. </p>
                 </div>
             </div>}
-           {usermatchState !== null &&
-            <MessagingBox 
-            // usersMessages={users[usermatchState].Messages} 
-            />
+           {usermatchState === true &&
+            <MessagingBox conversation = {conversation} />
             }
 
         </div>
@@ -63,9 +61,7 @@ const Messaging = (props) => {
     
     {usermatchState !== null &&
     <div className='message-box-section'>
-        <MessagingBox 
-        // usersMessages={users[usermatchState].Messages}
-        />
+        <MessagingBox onClick={()=> setUsermatchState(!usermatchState)}/>
     </div>}
    
    </div>
