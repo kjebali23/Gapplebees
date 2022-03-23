@@ -1,7 +1,8 @@
-import React from 'react'
+import React , {useRef} from 'react'
 import Facebook from '../../assets/Facebook.svg'
 import google from '../../assets/google.svg'
 import './Auth.css'
+import FormInput from './FormInput'
 
 const Login = () => {
   return (
@@ -10,14 +11,11 @@ const Login = () => {
         <div className='login-container'>
             <h2 className='form-title' >Login</h2>
             <form className='auth-form'>
-                <div className='form-section-container' >
-                <label>Email :</label>
-                <input type='email' required/>
-                </div>
-                <div className='form-section-container'>
-                <label>Password :</label>
-                <input type='password' required/>
-                </div>
+                
+                <FormInput label={'User name'} type={'text'} />
+                <FormInput label={'Email'} type={'email'}/>
+                <FormInput label={'Password'} type={'password'} />
+                
                 <button className='auth-form-btn' >Log-in</button>
             <div className='alternative-method' >
                 <h4>Or connect with :</h4>

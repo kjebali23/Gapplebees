@@ -24,6 +24,8 @@
     padding-top: 1rem; 
     border-radius: 2rem; 
     margin-top: 4rem; 
+    box-shadow: 3px 5px 10px -3px rgba(0,0,0,0.69);
+
 }
 
 .auth-form{
@@ -69,6 +71,14 @@
     border: none;
     border-radius: 0.5rem;
     margin-top: 0.3rem;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.auth-form-btn:hover{
+    background: linear-gradient(348deg, rgba(58,97,234,1) 0%, rgba(100,216,242,1) 100%);
+    color: white;
+    border: 1px solid white;
 }
 
 .alternative-method{
@@ -102,9 +112,13 @@
 
 .connection-prov-logo{
     background: whiteSmoke;
-    width: 3rem; 
+    width: 3rem;
     height: 3rem;
     border-radius: 0.5rem;
+}
+
+.connection-prov-logo:hover{
+    background: linear-gradient(348deg, rgba(58,97,234,1) 0%, rgba(100,216,242,1) 100%);
 }
 
 .redirect-link{

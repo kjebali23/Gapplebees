@@ -1,23 +1,102 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Facebook from '../../assets/Facebook.svg'
 import google from '../../assets/google.svg'
 import './Auth.css'
+import FormInput from './FormInput'
+import {gql , useMutation, graphQlErrors} from '@apollo/client'
+// import { useFormData } from '../../Hooks/useFormData'
+
+
+const signUp = gql`
+    mutation signUp($UserName : String , $Email: String , $Password : String) {
+  createNewUser(UserName : $UserName , Email: $Email , Password: $Password ) {
+    Email
+    Password
+    UserName
+  }
+}
+`
+
+
+
+
 
 const SignUp = () => {
+
+    let [errors , setErrors] = useState({})
+    const [values , setValues] = useState({
+        username:"",
+        email:"",
+        password:"",
+    });
+
+    const inputs = [
+        {
+            id: 1,
+            name:"username",
+            type:"text",
+            placeholder:"Username",
+            label:"Username"
+        },
+        {
+            id: 2,
+            name:"email",
+            type:"email",
+            placeholder:"Email",
+            label:"Email"
+        },
+        {
+            id: 3,
+            name:"password",
+            type:"password",
+            placeholder:"Password",
+            label:"Password"
+        }
+    ]
+
+
+
+
+    const onChange=(e)=>{
+        setValues({...values , [e.target.name]: e.target.value})
+    }
+
+    const [createUser] = useMutation(signUp ,{
+        update(proxy , result){
+            console.log(result)
+        },
+        onError(err){
+            console.log(err)
+        }
+    });
+
+    console.log(values)
+
   return (
     <div className='login-page'>
+        
         <h1 className='page-title' >Gapplebees</h1>
         <div className='login-container'>
             <h2 className="form-title">Sign Up</h2>
-            <form className='auth-form'>
-                <div className='form-section-container'>
-                <label>Email :</label>
-                <input type='email' required/>
-                </div>
-                <div className='form-section-container'>
-                <label>Password :</label>
-                <input type='password' required/>
-                </div>
+
+            <form onSubmit={ e => {
+
+                e.preventDefault();
+                createUser( {variables: {UserName: values.username , Email: values.email , Password: values.password}} )
+                // console.log(error)
+            }} 
+            className='auth-form'>
+            {inputs.map((input) => (
+          <FormInput
+            key={input.id}
+            {...input}
+            value={values[input.name]}
+            onChange={onChange}
+          />
+        ))}
+                
+                
+
                 <button className='auth-form-btn' >Sign-Up</button>
             <div className='alternative-method'>
                 <h4>Or connect with :</h4>
