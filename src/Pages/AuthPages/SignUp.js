@@ -3,7 +3,8 @@ import Facebook from '../../assets/Facebook.svg'
 import google from '../../assets/google.svg'
 import './Auth.css'
 import FormInput from './FormInput'
-import {gql , useMutation, graphQlErrors} from '@apollo/client'
+import {gql , useMutation} from '@apollo/client'
+
 // import { useFormData } from '../../Hooks/useFormData'
 
 
@@ -66,11 +67,19 @@ const SignUp = () => {
             console.log(result)
         },
         onError(err){
-            console.log(err)
+            setErrors(err.graphQLErrors[0].extensions.errors)
         }
     });
 
-    console.log(values)
+    const onSubmit = (e)=>{
+        e.preventDefault();
+        createUser( {variables: {UserName: values.username , Email: values.email , Password: values.password}} )
+
+    }
+
+        console.log(errors)
+  
+
 
   return (
     <div className='login-page'>
@@ -79,12 +88,7 @@ const SignUp = () => {
         <div className='login-container'>
             <h2 className="form-title">Sign Up</h2>
 
-            <form onSubmit={ e => {
-
-                e.preventDefault();
-                createUser( {variables: {UserName: values.username , Email: values.email , Password: values.password}} )
-                // console.log(error)
-            }} 
+            <form onSubmit={ onSubmit }
             className='auth-form'>
             {inputs.map((input) => (
           <FormInput
@@ -111,8 +115,15 @@ const SignUp = () => {
             </div>
             </form>
             <a className='redirect-link' href="http://localhost:3000/login">Already have an account?</a>
+            {Object.keys(errors).length > 0  && 
+               <div className='auth-errors'> 
+                   <p>{errors.email}</p>
+                   <p>{errors.usename}</p>
+                   <p>{errors.password}</p>
+                   
+                </div>   
+               }
         </div>
-
     </div>
   )
 }
