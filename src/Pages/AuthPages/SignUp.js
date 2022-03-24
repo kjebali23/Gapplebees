@@ -4,8 +4,9 @@ import google from '../../assets/google.svg'
 import './Auth.css'
 import FormInput from './FormInput'
 import {gql , useMutation} from '@apollo/client'
+import { useNavigate } from "react-router-dom";
 
-// import { useFormData } from '../../Hooks/useFormData'
+
 
 
 const signUp = gql`
@@ -30,6 +31,8 @@ const SignUp = () => {
         email:"",
         password:"",
     });
+
+    const navigate = useNavigate()
 
     const inputs = [
         {
@@ -64,7 +67,9 @@ const SignUp = () => {
 
     const [createUser] = useMutation(signUp ,{
         update(proxy , result){
-            console.log(result)
+            console.log(`User with data ${result.username } has been registred`)
+            navigate('/race')
+
         },
         onError(err){
             setErrors(err.graphQLErrors[0].extensions.errors)
