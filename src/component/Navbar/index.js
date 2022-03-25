@@ -12,9 +12,7 @@ const Navbar = () => {
                 </NavLink>
                 <Bars />
                 <NavMenu className='nav-links' id={showLinks ? "hidden" : ""}>
-                    <NavLink to="/about" activeStyle > About </NavLink>
-                    <NavLink to="/features" activeStyle > Features </NavLink>
-                    <NavLink to="/contact-us" activeStyle > Contact Us </NavLink>
+                    <NavLink to="/login" activeStyle > Login </NavLink>
                     <NavLink to="/sign-up" activeStyle > Sign Up </NavLink>
                     <NavLink to="/race" activeStyle > Race </NavLink>
 

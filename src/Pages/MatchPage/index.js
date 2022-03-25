@@ -14,13 +14,15 @@ export default function SimpleContainer() {
 
   const displayPage = useSelector((state) => state.counter.value)
 
+
+
   const {error , data , loading } = useInfo("622e910c19ebfba7441f7310")
 
 
 
   return (
     <div className='matchpage' >
-    <Dashboard/>
+    <Dashboard />
     {displayPage === 0 && <Match/>}
     {displayPage === 1 && <Profile userData = {data.getUser} />}
     {displayPage ===2 && <Messaging userMatchs = {data.getUser.Matchs} />}

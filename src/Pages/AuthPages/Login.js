@@ -70,6 +70,7 @@ const Login = () => {
     if (loading) return <p>Loading ...</p>;
     if (error) return <p>An error occured</p>;
     if (data) {
+        sessionStorage.setItem('JWT' , data.login.Token )
       navigate('/race')
     //   return(<BrowserRouter to="/" />)
     }

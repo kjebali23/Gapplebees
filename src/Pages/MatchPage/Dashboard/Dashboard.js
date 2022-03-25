@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { profile, dashboard , messaging } from '../../../redux/counter'
 
 
-const Dashboard = () => {
+const Dashboard = (props) => {
   const imageLink ="https://images.unsplash.com/photo-1631819825505-4291831187ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWF6ZGElMjBtaWF0YXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60";
   
   const count = useSelector((state) => state.counter.value)
@@ -27,8 +27,8 @@ const Dashboard = () => {
             }
               } >
               
-              <Avatar src={imageLink}/>              
-              <h3 className='user-name'>khalil</h3>
+              <Avatar/>              
+              <h3 className='user-name'>jhon</h3>
             </div>
             </div>
 

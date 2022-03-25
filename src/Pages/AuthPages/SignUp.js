@@ -15,6 +15,7 @@ const signUp = gql`
     Email
     Password
     UserName
+    Token
   }
 }
 `
@@ -67,7 +68,7 @@ const SignUp = () => {
 
     const [createUser] = useMutation(signUp ,{
         update(proxy , result){
-            console.log(`User with data ${result.username } has been registred`)
+            sessionStorage.setItem('JWT' , result.data.createNewUser.Token)
             navigate('/race')
 
         },
@@ -80,10 +81,7 @@ const SignUp = () => {
         e.preventDefault();
         createUser( {variables: {UserName: values.username , Email: values.email , Password: values.password}} )
 
-    }
-
-        console.log(errors)
-  
+    }  
 
 
   return (

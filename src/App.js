@@ -8,7 +8,11 @@ import MatchPage from './Pages/MatchPage';
 import Login from './Pages/AuthPages/Login'
 import SignUp from './Pages/AuthPages/SignUp'
 
+
 function App() {
+    
+
+    
   return (
     <>
       <Router>

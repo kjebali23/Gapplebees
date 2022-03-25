@@ -2,7 +2,6 @@ import React from 'react';
 import '../ProfileSection.css'
 
 const UserForm = (props) => {
-  console.log(props.userInfo)
   return (
       <>
         <form className='user-form'>

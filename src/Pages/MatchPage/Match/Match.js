@@ -15,6 +15,8 @@ const getBots = gql`
 }
 `
 
+
+
 const Match = () => {
 
   const {error , data , loading} = useQuery(getBots);

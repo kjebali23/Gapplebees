@@ -3,7 +3,7 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { messaging } from '../../../redux/counter';
 import { useDispatch } from 'react-redux';
 import { useMessages } from '../../../Hooks/useMessages';
-import Message from './Message';
+// import Message from './Message';
 
 
 
@@ -27,9 +27,9 @@ const MessagingBox = (props) => {
         </div>
       </div>
     <div className='message-box'>
-      <div className='message-container' style={{  width:'97%' , height:'90%' , overflow:'scroll'}}>
+      {/* <div className='message-container' style={{  width:'97%' , height:'90%' , overflow:'scroll'}}>
         <Message messages={data.getMessages} />
-      </div>
+      </div> */}
     </div>
     </div>
   )

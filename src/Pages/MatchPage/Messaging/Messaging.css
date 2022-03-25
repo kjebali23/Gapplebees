@@ -28,6 +28,33 @@
     background:linear-gradient(348deg, rgba(58,97,234,1) 0%, rgba(100,216,242,1) 100%);
 }
 
+.matchs-div{
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    width: 90%;
+    height: 100%;
+    overflow: scroll;
+    border: solid 2px whitesmoke; 
+    border-radius: 1rem;
+    background:linear-gradient(348deg, rgba(58,97,234,1) 0%, rgba(100,216,242,1) 100%);
+    display: flex;
+    justify-content: center;
+}
+
+.empty-matchs{
+    background: white; 
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 12%; 
+    border-radius: 1rem; 
+    box-shadow: 0px 0px 41px 0px rgba(173,176,245,1);
+    display: flex;
+    justify-content: center;
+}
+
 .list-item{
     background: white; 
     display: flex; 

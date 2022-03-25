@@ -7,7 +7,7 @@ import BackBtn from '../Profile/Parameters/BackBtn';
 
 const Messaging = (props) => {
 
-    const [usermatchState , setUsermatchState] = useState(true);
+    const [usermatchState , setUsermatchState] = useState(false);
     const [conversation , setConversation] = useState("620fbdcbe76c5d446fa43907");
 
   let width = window.innerWidth;
@@ -19,11 +19,18 @@ const Messaging = (props) => {
        <div className='messaging-page-container'>
         <div className='user-matchs-section'>
             <BackBtn/>
-            <ul className='matchs-list'>
-            {props.userMatchs.map((match)=>
-            <MatchedUser match={match} MessageBox={setUsermatchState}  conversation={setConversation} />
-            )}
-            </ul>
+            {usermatchState === true &&
+              <ul className='matchs-list'>
+              {props.userMatchs.map((match)=>
+              <MatchedUser match={match} MessageBox={setUsermatchState}  conversation={setConversation} />
+              )}
+              </ul>  
+            }
+            {usermatchState === false && 
+                <div className='matchs-div'>
+                    <div className='empty-matchs'><p>There is nothing to display</p></div>
+                </div>  
+            }
         </div>
         <div className='message-box-section'>
             { usermatchState === false &&
@@ -36,7 +43,7 @@ const Messaging = (props) => {
                 </div>
             </div>}
            {usermatchState === true &&
-            <MessagingBox conversation = {conversation} />
+            <MessagingBox />
             }
 
         </div>

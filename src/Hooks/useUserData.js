@@ -1,7 +1,10 @@
 import { gql , useQuery } from '@apollo/client';
 
+
+
+
 const UserInfo = gql`
-    query user($userId : ID!){
+    query user($userId : ID! ){
         getUser(id: $userId) {
         UserName
         Images
@@ -12,10 +15,11 @@ const UserInfo = gql`
 `
 
 
-export const useInfo = (userId)=>{
+export const useInfo = (userId , Token)=>{
           const {error , loading , data} = useQuery(UserInfo, {
               variables:{
-                  userId
+                  userId,
+                  Token
               }
           });
           return{
